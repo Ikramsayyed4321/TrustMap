@@ -1,0 +1,37 @@
+[18:49:42.188] [32mINFO[39m (8844): [36mMySQL database ready[39m
+    database: "Trust_map_db"
+[18:49:45.359] [32mINFO[39m (8844): [36mEnvironment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+Datasource "db": MySQL database "Trust_map_db" at "localhost:3306"
+
+No migration found in prisma/migrations
+
+
+No pending migrations to apply.[39m
+[18:49:48.831] [31mERROR[39m (8844): [36mDatabase setup failed; API startup aborted[39m
+    err: {
+      "type": "Error",
+      "message": "Command failed: npx.cmd prisma db push --accept-data-loss\nError: Cannot drop index 'Business_ownerId_fkey': needed in a foreign key constraint\n   0: sql_schema_connector::apply_migration::migration_step\n           with step=DropIndex { index_id: IndexId(8) }\n             at schema-engine\\connectors\\sql-schema-connector\\src\\apply_migration.rs:21\n   1: sql_schema_connector::apply_migration::apply_migration\n             at schema-engine\\connectors\\sql-schema-connector\\src\\apply_migration.rs:10\n   2: schema_core::state::SchemaPush\n             at schema-engine\\core\\src\\state.rs:504\n\n",
+      "stack":
+          Error: Command failed: npx.cmd prisma db push --accept-data-loss
+          Error: Cannot drop index 'Business_ownerId_fkey': needed in a foreign key constraint
+             0: sql_schema_connector::apply_migration::migration_step
+                     with step=DropIndex { index_id: IndexId(8) }
+                       at schema-engine\connectors\sql-schema-connector\src\apply_migration.rs:21
+             1: sql_schema_connector::apply_migration::apply_migration
+                       at schema-engine\connectors\sql-schema-connector\src\apply_migration.rs:10
+             2: schema_core::state::SchemaPush
+                       at schema-engine\core\src\state.rs:504
+          
+          
+              at ChildProcess.exithandler (node:child_process:419:12)
+              at ChildProcess.emit (node:events:513:28)
+              at maybeClose (node:internal/child_process:1091:16)
+              at ChildProcess._handle.onexit (node:internal/child_process:302:5)
+      "code": 1,
+      "killed": false,
+      "signal": null,
+      "cmd": "npx.cmd prisma db push --accept-data-loss",
+      "stdout": "Environment variables loaded from .env\nPrisma schema loaded from prisma\\schema.prisma\nDatasource \"db\": MySQL database \"Trust_map_db\" at \"localhost:3306\"\n",
+      "stderr": "Error: Cannot drop index 'Business_ownerId_fkey': needed in a foreign key constraint\n   0: sql_schema_connector::apply_migration::migration_step\n           with step=DropIndex { index_id: IndexId(8) }\n             at schema-engine\\connectors\\sql-schema-connector\\src\\apply_migration.rs:21\n   1: sql_schema_connector::apply_migration::apply_migration\n             at schema-engine\\connectors\\sql-schema-connector\\src\\apply_migration.rs:10\n   2: schema_core::state::SchemaPush\n             at schema-engine\\core\\src\\state.rs:504\n\n"
+    }

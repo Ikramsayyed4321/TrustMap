@@ -1,0 +1,16 @@
+[18:57:16.650] [32mINFO[39m (40352): [36mMySQL database ready[39m
+    database: "Trust_map_db"
+prisma:query SELECT COUNT(*) FROM (SELECT `Trust_map_db`.`User`.`id` FROM `Trust_map_db`.`User` WHERE 1=1) AS `sub`
+[18:57:19.645] [32mINFO[39m (40352): [36mEnvironment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+Datasource "db": MySQL database "Trust_map_db" at "localhost:3306"
+
+1 migration found in prisma/migrations
+
+
+No pending migrations to apply.[39m
+[18:57:19.645] [32mINFO[39m (40352): [36mPrisma migrations applied[39m
+[18:57:19.653] [32mINFO[39m (40352): [36mMySQL connected[39m
+[18:57:19.725] [32mINFO[39m (40352): [36mDevelopment seed skipped; data already exists[39m
+[18:57:19.728] [32mINFO[39m (40352): [36mReviewHub API listening on port 4000[39m
+[0mGET /health [32m200[0m 10.278 ms - 41[0m

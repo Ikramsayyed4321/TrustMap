@@ -1,0 +1,27 @@
+{
+  "name": "reviewhub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ReviewHub monorepo: independent local-business reviews platform with React, Express, MongoDB, Leaflet, and OpenAI-powered review intelligence.",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "lint": "npm run lint --workspaces",
+    "test": "npm run test --workspaces --if-present",
+    "format": "prettier --write ."
+  },
+  "overrides": {
+    "vite": "6.4.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=20.11.0",
+    "npm": ">=10.0.0"
+  }
+}

@@ -1,0 +1,27 @@
+[19:05:53.348] [32mINFO[39m (12640): [36mMySQL database ready[39m
+    database: "Trust_map_db"
+prisma:query SELECT COUNT(*) FROM (SELECT `Trust_map_db`.`User`.`id` FROM `Trust_map_db`.`User` WHERE 1=1) AS `sub`
+[19:05:57.383] [32mINFO[39m (12640): [36mEnvironment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+Datasource "db": MySQL database "Trust_map_db" at "localhost:3306"
+
+1 migration found in prisma/migrations
+
+
+No pending migrations to apply.[39m
+[19:05:57.383] [32mINFO[39m (12640): [36mPrisma migrations applied[39m
+[19:05:57.402] [32mINFO[39m (12640): [36mMySQL connected[39m
+[19:05:57.483] [32mINFO[39m (12640): [36mDevelopment seed skipped; data already exists[39m
+[19:05:57.491] [32mINFO[39m (12640): [36mReviewHub API listening on port 4000[39m
+[0mGET /health [32m200[0m 7.233 ms - 41[0m
+prisma:query SELECT `Trust_map_db`.`User`.`id`, `Trust_map_db`.`User`.`name`, `Trust_map_db`.`User`.`email`, `Trust_map_db`.`User`.`passwordHash`, `Trust_map_db`.`User`.`role`, `Trust_map_db`.`User`.`avatarUrl`, `Trust_map_db`.`User`.`bio`, `Trust_map_db`.`User`.`isEmailVerified`, `Trust_map_db`.`User`.`isBanned`, `Trust_map_db`.`User`.`reputationPoints`, `Trust_map_db`.`User`.`badges`, `Trust_map_db`.`User`.`refreshTokenHash`, `Trust_map_db`.`User`.`lastLoginAt`, `Trust_map_db`.`User`.`createdAt`, `Trust_map_db`.`User`.`updatedAt` FROM `Trust_map_db`.`User` WHERE (`Trust_map_db`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query BEGIN
+prisma:query INSERT INTO `Trust_map_db`.`User` (`id`,`name`,`email`,`passwordHash`,`role`,`isEmailVerified`,`isBanned`,`reputationPoints`,`badges`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+prisma:query SELECT `Trust_map_db`.`User`.`id`, `Trust_map_db`.`User`.`name`, `Trust_map_db`.`User`.`email`, `Trust_map_db`.`User`.`passwordHash`, `Trust_map_db`.`User`.`role`, `Trust_map_db`.`User`.`avatarUrl`, `Trust_map_db`.`User`.`bio`, `Trust_map_db`.`User`.`isEmailVerified`, `Trust_map_db`.`User`.`isBanned`, `Trust_map_db`.`User`.`reputationPoints`, `Trust_map_db`.`User`.`badges`, `Trust_map_db`.`User`.`refreshTokenHash`, `Trust_map_db`.`User`.`lastLoginAt`, `Trust_map_db`.`User`.`createdAt`, `Trust_map_db`.`User`.`updatedAt` FROM `Trust_map_db`.`User` WHERE `Trust_map_db`.`User`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query SELECT `Trust_map_db`.`User`.`id` FROM `Trust_map_db`.`User` WHERE (`Trust_map_db`.`User`.`id` = ? AND 1=1)
+prisma:query UPDATE `Trust_map_db`.`User` SET `refreshTokenHash` = ?, `updatedAt` = ? WHERE (`Trust_map_db`.`User`.`id` IN (?) AND (`Trust_map_db`.`User`.`id` = ? AND 1=1))
+prisma:query SELECT `Trust_map_db`.`User`.`id`, `Trust_map_db`.`User`.`name`, `Trust_map_db`.`User`.`email`, `Trust_map_db`.`User`.`passwordHash`, `Trust_map_db`.`User`.`role`, `Trust_map_db`.`User`.`avatarUrl`, `Trust_map_db`.`User`.`bio`, `Trust_map_db`.`User`.`isEmailVerified`, `Trust_map_db`.`User`.`isBanned`, `Trust_map_db`.`User`.`reputationPoints`, `Trust_map_db`.`User`.`badges`, `Trust_map_db`.`User`.`refreshTokenHash`, `Trust_map_db`.`User`.`lastLoginAt`, `Trust_map_db`.`User`.`createdAt`, `Trust_map_db`.`User`.`updatedAt` FROM `Trust_map_db`.`User` WHERE `Trust_map_db`.`User`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+[0mPOST /api/v1/auth/register [32m201[0m 1922.012 ms - 468[0m

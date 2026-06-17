@@ -1,0 +1,47 @@
+services:
+  mysql:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-Ikram121921@sql}
+      MYSQL_DATABASE: ${DB_NAME:-Trust_map_db}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-p${DB_PASSWORD:-Ikram121921@sql}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    depends_on:
+      mysql:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      DB_HOST: mysql
+      DATABASE_URL: mysql://root:Ikram121921%40sql@mysql:3306/Trust_map_db
+    ports:
+      - "4000:4000"
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    depends_on:
+      - api
+    environment:
+      VITE_API_URL: http://localhost:4000/api/v1
+    ports:
+      - "5173:5173"
+
+volumes:
+  mysql-data:
+
+

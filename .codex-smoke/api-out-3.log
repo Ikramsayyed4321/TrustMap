@@ -1,0 +1,93 @@
+[18:51:31.268] [32mINFO[39m (31904): [36mMySQL database ready[39m
+    database: "Trust_map_db"
+[18:51:34.449] [33mWARN[39m (31904): [36mPrisma migrate deploy did not complete; continuing with schema sync[39m
+    err: {
+      "type": "Error",
+      "message": "Command failed: npx.cmd prisma migrate deploy\nError: P3005\n\nThe database schema is not empty. Read more about how to baseline an existing production database: https://pris.ly/d/migrate-baseline\n\n",
+      "stack":
+          Error: Command failed: npx.cmd prisma migrate deploy
+          Error: P3005
+          
+          The database schema is not empty. Read more about how to baseline an existing production database: https://pris.ly/d/migrate-baseline
+          
+          
+              at ChildProcess.exithandler (node:child_process:419:12)
+              at ChildProcess.emit (node:events:513:28)
+              at maybeClose (node:internal/child_process:1091:16)
+              at ChildProcess._handle.onexit (node:internal/child_process:302:5)
+      "code": 1,
+      "killed": false,
+      "signal": null,
+      "cmd": "npx.cmd prisma migrate deploy",
+      "stdout": "Environment variables loaded from .env\nPrisma schema loaded from prisma\\schema.prisma\nDatasource \"db\": MySQL database \"Trust_map_db\" at \"localhost:3306\"\n\nNo migration found in prisma/migrations\n\n",
+      "stderr": "Error: P3005\n\nThe database schema is not empty. Read more about how to baseline an existing production database: https://pris.ly/d/migrate-baseline\n\n"
+    }
+[18:51:38.268] [33mWARN[39m (31904): [36mSchema sync failed; resetting development database automatically[39m
+    err: {
+      "type": "Error",
+      "message": "Command failed: npx.cmd prisma db push --accept-data-loss\nError: Cannot drop index 'Business_ownerId_fkey': needed in a foreign key constraint\n   0: sql_schema_connector::apply_migration::migration_step\n           with step=DropIndex { index_id: IndexId(7) }\n             at schema-engine\\connectors\\sql-schema-connector\\src\\apply_migration.rs:21\n   1: sql_schema_connector::apply_migration::apply_migration\n             at schema-engine\\connectors\\sql-schema-connector\\src\\apply_migration.rs:10\n   2: schema_core::state::SchemaPush\n             at schema-engine\\core\\src\\state.rs:504\n\n",
+      "stack":
+          Error: Command failed: npx.cmd prisma db push --accept-data-loss
+          Error: Cannot drop index 'Business_ownerId_fkey': needed in a foreign key constraint
+             0: sql_schema_connector::apply_migration::migration_step
+                     with step=DropIndex { index_id: IndexId(7) }
+                       at schema-engine\connectors\sql-schema-connector\src\apply_migration.rs:21
+             1: sql_schema_connector::apply_migration::apply_migration
+                       at schema-engine\connectors\sql-schema-connector\src\apply_migration.rs:10
+             2: schema_core::state::SchemaPush
+                       at schema-engine\core\src\state.rs:504
+          
+          
+              at ChildProcess.exithandler (node:child_process:419:12)
+              at ChildProcess.emit (node:events:513:28)
+              at maybeClose (node:internal/child_process:1091:16)
+              at ChildProcess._handle.onexit (node:internal/child_process:302:5)
+      "code": 1,
+      "killed": false,
+      "signal": null,
+      "cmd": "npx.cmd prisma db push --accept-data-loss",
+      "stdout": "Environment variables loaded from .env\nPrisma schema loaded from prisma\\schema.prisma\nDatasource \"db\": MySQL database \"Trust_map_db\" at \"localhost:3306\"\n",
+      "stderr": "Error: Cannot drop index 'Business_ownerId_fkey': needed in a foreign key constraint\n   0: sql_schema_connector::apply_migration::migration_step\n           with step=DropIndex { index_id: IndexId(7) }\n             at schema-engine\\connectors\\sql-schema-connector\\src\\apply_migration.rs:21\n   1: sql_schema_connector::apply_migration::apply_migration\n             at schema-engine\\connectors\\sql-schema-connector\\src\\apply_migration.rs:10\n   2: schema_core::state::SchemaPush\n             at schema-engine\\core\\src\\state.rs:504\n\n"
+    }
+prisma:query SELECT COUNT(*) FROM (SELECT `Trust_map_db`.`User`.`id` FROM `Trust_map_db`.`User` WHERE 1=1) AS `sub`
+[18:51:46.747] [32mINFO[39m (31904): [36mEnvironment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+Datasource "db": MySQL database "Trust_map_db" at "localhost:3306"
+
+The MySQL database "Trust_map_db" at "localhost:3306" was successfully reset.
+
+Your database is now in sync with your Prisma schema. Done in 2.77s
+
+Running generate... (Use --skip-generate to skip the generators)
+[2K[1A[2K[GRunning generate... - Prisma Client
+[2K[1A[2K[GEPERM: operation not permitted, rename 'D:\TrustMap\node_modules\.prisma\client\
+query_engine-windows.dll.node.tmp33368' -> 'D:\TrustMap\node_modules\.prisma\cli
+ent\query_engine-windows.dll.node'[39m
+[18:51:46.748] [32mINFO[39m (31904): [36mPrisma schema synchronized[39m
+[18:51:46.805] [32mINFO[39m (31904): [36mMySQL connected[39m
+prisma:query BEGIN
+prisma:query BEGIN
+prisma:query BEGIN
+prisma:query INSERT INTO `Trust_map_db`.`Category` (`id`,`name`,`slug`,`icon`,`description`,`isActive`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?,?)
+prisma:query INSERT INTO `Trust_map_db`.`Category` (`id`,`name`,`slug`,`icon`,`description`,`isActive`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?,?)
+prisma:query INSERT INTO `Trust_map_db`.`Category` (`id`,`name`,`slug`,`icon`,`description`,`isActive`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?,?)
+prisma:query SELECT `Trust_map_db`.`Category`.`id`, `Trust_map_db`.`Category`.`name`, `Trust_map_db`.`Category`.`slug`, `Trust_map_db`.`Category`.`icon`, `Trust_map_db`.`Category`.`description`, `Trust_map_db`.`Category`.`isActive`, `Trust_map_db`.`Category`.`createdAt`, `Trust_map_db`.`Category`.`updatedAt` FROM `Trust_map_db`.`Category` WHERE `Trust_map_db`.`Category`.`id` = ? LIMIT ? OFFSET ?
+prisma:query SELECT `Trust_map_db`.`Category`.`id`, `Trust_map_db`.`Category`.`name`, `Trust_map_db`.`Category`.`slug`, `Trust_map_db`.`Category`.`icon`, `Trust_map_db`.`Category`.`description`, `Trust_map_db`.`Category`.`isActive`, `Trust_map_db`.`Category`.`createdAt`, `Trust_map_db`.`Category`.`updatedAt` FROM `Trust_map_db`.`Category` WHERE `Trust_map_db`.`Category`.`id` = ? LIMIT ? OFFSET ?
+prisma:query SELECT `Trust_map_db`.`Category`.`id`, `Trust_map_db`.`Category`.`name`, `Trust_map_db`.`Category`.`slug`, `Trust_map_db`.`Category`.`icon`, `Trust_map_db`.`Category`.`description`, `Trust_map_db`.`Category`.`isActive`, `Trust_map_db`.`Category`.`createdAt`, `Trust_map_db`.`Category`.`updatedAt` FROM `Trust_map_db`.`Category` WHERE `Trust_map_db`.`Category`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query COMMIT
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query BEGIN
+prisma:query INSERT INTO `Trust_map_db`.`User` (`id`,`name`,`email`,`passwordHash`,`role`,`isEmailVerified`,`isBanned`,`reputationPoints`,`badges`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+prisma:query INSERT INTO `Trust_map_db`.`User` (`id`,`name`,`email`,`passwordHash`,`role`,`isEmailVerified`,`isBanned`,`reputationPoints`,`badges`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?,?,?,?,?)
+prisma:query SELECT `Trust_map_db`.`User`.`id`, `Trust_map_db`.`User`.`name`, `Trust_map_db`.`User`.`email`, `Trust_map_db`.`User`.`passwordHash`, `Trust_map_db`.`User`.`role`, `Trust_map_db`.`User`.`avatarUrl`, `Trust_map_db`.`User`.`bio`, `Trust_map_db`.`User`.`isEmailVerified`, `Trust_map_db`.`User`.`isBanned`, `Trust_map_db`.`User`.`reputationPoints`, `Trust_map_db`.`User`.`badges`, `Trust_map_db`.`User`.`refreshTokenHash`, `Trust_map_db`.`User`.`lastLoginAt`, `Trust_map_db`.`User`.`createdAt`, `Trust_map_db`.`User`.`updatedAt` FROM `Trust_map_db`.`User` WHERE `Trust_map_db`.`User`.`id` = ? LIMIT ? OFFSET ?
+prisma:query SELECT `Trust_map_db`.`User`.`id`, `Trust_map_db`.`User`.`name`, `Trust_map_db`.`User`.`email`, `Trust_map_db`.`User`.`passwordHash`, `Trust_map_db`.`User`.`role`, `Trust_map_db`.`User`.`avatarUrl`, `Trust_map_db`.`User`.`bio`, `Trust_map_db`.`User`.`isEmailVerified`, `Trust_map_db`.`User`.`isBanned`, `Trust_map_db`.`User`.`reputationPoints`, `Trust_map_db`.`User`.`badges`, `Trust_map_db`.`User`.`refreshTokenHash`, `Trust_map_db`.`User`.`lastLoginAt`, `Trust_map_db`.`User`.`createdAt`, `Trust_map_db`.`User`.`updatedAt` FROM `Trust_map_db`.`User` WHERE `Trust_map_db`.`User`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query INSERT INTO `Trust_map_db`.`Business` (`city`,`tags`,`averageRating`,`address`,`createdAt`,`galleryImages`,`categoryId`,`priceRange`,`latitude`,`ownerResponsesEnabled`,`ownerId`,`id`,`trendingScore`,`amenities`,`ratingDistribution`,`longitude`,`totalReviews`,`country`,`aiSummary`,`slug`,`updatedAt`,`name`,`state`,`verified`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?), (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+prisma:query COMMIT
+[18:51:48.267] [32mINFO[39m (31904): [36mDevelopment seed data created[39m
+[18:51:48.273] [32mINFO[39m (31904): [36mReviewHub API listening on port 4000[39m
+[0mGET /health [32m200[0m 12.612 ms - 41[0m

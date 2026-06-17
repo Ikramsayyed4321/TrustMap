@@ -1,0 +1,384 @@
+```txt
+You are a Senior Full-Stack Architect and AI Engineer.
+
+Build a production-ready modern Review Platform Web App + Admin Panel similar to Google Maps Reviews, Yelp, Tripadvisor, and Amazon Reviews BUT completely independent from Google Maps APIs and external review providers.
+
+Tech Stack Requirements:
+- Frontend Framework: React + TypeScript
+- Backend: Node.js + Express + TypeScript
+- Database: MongoDB
+- Authentication: JWT + Refresh Token
+- State Management: Redux Toolkit or Zustand
+- Styling: Tailwind CSS + ShadCN UI
+- File Uploads: Cloudinary or AWS S3
+- AI Review Summary: OpenAI API integration
+- ORM/ODM: Mongoose
+- Deployment Ready Structure
+- REST API architecture
+- Responsive Design
+- SEO Friendly
+- Dark/Light Mode
+- Scalable folder structure
+- Docker support
+- Environment configuration
+- Secure APIs
+- Clean Architecture
+
+PROJECT NAME:
+ReviewHub
+
+MAIN PURPOSE:
+Users can search and review:
+- Restaurants
+- Hotels
+- Shops
+- Cafes
+- Hospitals
+- Gyms
+- Salons
+- Local Businesses
+
+The platform should become a competitor to Google Maps reviews system but WITHOUT using Google Maps as the data source.
+
+===========================================================
+CORE FEATURES
+===========================================================
+
+1. AUTHENTICATION SYSTEM
+Create two login roles:
+
+A) Admin Login
+Features:
+- Dashboard analytics
+- Manage users
+- Manage reviewers
+- Manage business listings
+- Approve/reject reviews
+- Ban users
+- Delete fake reviews
+- View reports
+- AI moderation system
+- Revenue dashboard
+- Category management
+- Notification management
+
+B) Reviewer/User Login
+Features:
+- Register/Login
+- JWT authentication
+- Forgot password
+- Email verification
+- Edit profile
+- Upload avatar
+- Add reviews
+- Upload photos/videos
+- Like helpful reviews
+- Save favorite places
+- Follow reviewers
+- Review history
+- Reputation points
+- Reviewer badges
+
+===========================================================
+BUSINESS LISTING FEATURES
+===========================================================
+
+Each business page should contain:
+
+- Business Name
+- Category
+- Address
+- City
+- State
+- Country
+- Contact Number
+- Website
+- Business Hours
+- Cover Image
+- Gallery Images
+- Average Rating
+- Total Review Count
+- Rating Distribution
+- AI Generated Summary
+- Tags
+- Amenities
+- Location Coordinates (own database, NOT Google Maps)
+- Nearby Businesses
+- Verified Badge
+- Owner Response Section
+
+===========================================================
+REVIEW SYSTEM
+===========================================================
+
+Each review should contain:
+
+- User Name
+- User Profile Photo
+- Review Rating
+- Review Date
+- Review Title
+- Review Text
+- Uploaded Photos
+- Uploaded Videos
+- Helpful Count
+- Comment Replies
+- AI Sentiment Analysis
+- AI Spam Detection
+- Verified Visit Badge
+- Edited Review History
+
+Support:
+- 1 to 5 star ratings
+- Photo uploads
+- Video uploads
+- Review editing
+- Review deletion
+- Report review
+- Like/Dislike review
+- Sorting:
+  - Latest
+  - Highest Rated
+  - Lowest Rated
+  - Most Helpful
+
+===========================================================
+AI FEATURES
+===========================================================
+
+Implement OpenAI-powered features:
+
+1. AI Review Summary
+Generate short summary from all reviews.
+
+Example:
+"Most users praised the food quality and ambience, but some complained about slow service."
+
+2. AI Sentiment Analysis
+Classify:
+- Positive
+- Neutral
+- Negative
+
+3. AI Fake Review Detection
+Detect:
+- Spam reviews
+- Bot reviews
+- Duplicate reviews
+- Toxic content
+
+4. AI Smart Search
+Users can search:
+"Best family restaurant near airport with good biryani"
+
+===========================================================
+SEARCH & DISCOVERY SYSTEM
+===========================================================
+
+Create advanced search system:
+
+Filters:
+- Category
+- Rating
+- Distance
+- Price Range
+- Open Now
+- Verified Only
+- Trending
+- Most Reviewed
+
+Features:
+- Autocomplete
+- Search suggestions
+- Trending places
+- Nearby places
+- Infinite scrolling
+- Pagination
+
+===========================================================
+MAP SYSTEM (WITHOUT GOOGLE MAPS)
+===========================================================
+
+DO NOT use Google Maps APIs.
+
+Use:
+- OpenStreetMap
+- Leaflet.js
+
+Features:
+- Custom markers
+- Nearby businesses
+- Cluster markers
+- Business detail popup
+- User location detection
+- Route directions
+- Dark mode map
+
+===========================================================
+DATABASE DESIGN
+===========================================================
+
+Create MongoDB schemas for:
+
+1. Users
+2. Businesses
+3. Reviews
+4. Categories
+5. Reports
+6. Notifications
+7. AI Summaries
+8. Media Uploads
+9. Saved Places
+10. Review Likes
+
+Include:
+- Relationships
+- Indexing
+- Aggregations
+- Optimized queries
+
+===========================================================
+ADMIN DASHBOARD UI
+===========================================================
+
+Create modern analytics dashboard with:
+- Total users
+- Total reviews
+- Active reviewers
+- Most reviewed places
+- Recent activities
+- Charts & graphs
+- Revenue analytics
+- Reports moderation
+- AI moderation alerts
+
+===========================================================
+FRONTEND PAGES
+===========================================================
+
+Create these pages:
+
+PUBLIC:
+- Home
+- Search Results
+- Business Details
+- Categories
+- Reviewer Profiles
+- Trending Places
+- Login/Register
+- About
+- Contact
+
+USER DASHBOARD:
+- My Reviews
+- Saved Places
+- Notifications
+- Profile Settings
+
+ADMIN PANEL:
+- Dashboard
+- Manage Users
+- Manage Reviews
+- Manage Businesses
+- Reports
+- Analytics
+- Settings
+
+===========================================================
+UI/UX DESIGN REQUIREMENTS
+===========================================================
+
+Design style:
+- Premium modern UI
+- Minimalistic
+- Glassmorphism
+- Smooth animations
+- Mobile responsive
+- Sticky search navbar
+- Skeleton loaders
+- Lazy loading
+- Toast notifications
+- Modern cards
+- Interactive charts
+
+Use:
+- Framer Motion
+- Recharts
+- Lucide Icons
+
+===========================================================
+SECURITY REQUIREMENTS
+===========================================================
+
+Implement:
+- JWT auth
+- Role based access
+- Rate limiting
+- Helmet security
+- Input sanitization
+- XSS protection
+- Secure uploads
+- API validation
+- CSRF protection
+
+===========================================================
+BACKEND API REQUIREMENTS
+===========================================================
+
+Create:
+- Modular architecture
+- Controller-service-repository pattern
+- Validation middleware
+- Error handling middleware
+- Logging system
+- API documentation (Swagger)
+
+===========================================================
+PROJECT STRUCTURE
+===========================================================
+
+Generate:
+- Complete folder structure
+- Clean architecture
+- Reusable components
+- Environment files
+- Docker configuration
+- README.md
+- API docs
+- Setup instructions
+
+===========================================================
+BONUS FEATURES
+===========================================================
+
+Add:
+- Real-time notifications
+- WebSockets
+- PWA support
+- Multi-language support
+- Voice review support
+- QR code business pages
+- Business owner dashboard
+- AI chatbot support
+- Dark/light mode toggle
+
+===========================================================
+DELIVERABLES
+===========================================================
+
+Generate:
+1. Complete frontend architecture
+2. Backend architecture
+3. MongoDB schema design
+4. API endpoints list
+5. React component structure
+6. UI design system
+7. Admin dashboard layout
+8. Authentication flow
+9. AI integration architecture
+10. Deployment guide
+11. Docker setup
+12. Production best practices
+
+Generate production-grade scalable code with comments and enterprise architecture.
+```
